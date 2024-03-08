@@ -20,6 +20,6 @@ public class MessageController {
 
     @PostMapping
     public void publish(@RequestBody MessageRequest request){
-        kafkaTemplate.send("indatacore", request.message());
+        kafkaTemplate.send("test_indatacore_kafka", request.message());
     }
 }
